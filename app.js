@@ -11,7 +11,8 @@ const app=express();
 require("./config/passport")(passport);
 
 //config
-// const db=require("./config-folder/keys").MongoURI;
+const password = encodeURIComponent("Raghvendra@123");
+const db=`mongodb+srv://Raghvendra-Shukla:${password}@raghvendra-cluster.nub3x7g.mongodb.net/?retryWrites=true&w=majority`;
 
 //mongo connection
 mongoose.connect(db,{useNewUrlParser:true})
