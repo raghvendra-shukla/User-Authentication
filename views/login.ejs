@@ -1,0 +1,20 @@
+<div class="container mt-2 d-flex flex-column border border-3 rounded bg-secondary text-white ">
+    <div class="container text-center mt-2">
+        <img src="https://img.icons8.com/small/96/000000/nodejs.png"/>
+    </div>
+    <%- include ("./partials/messages"); %>
+    <form action="/user/login" method="POST">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Your Email">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto mb-3">
+            <button class="btn btn-danger" type="submit">Login</button>
+            <a href="/user/register" class="btn btn-danger">Register</a>
+        </div>
+      </form>
+    </div>

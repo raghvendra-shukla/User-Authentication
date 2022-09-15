@@ -1,0 +1,28 @@
+<div class="container mt-2 d-flex flex-column border border-3 rounded bg-secondary text-white ">
+    <div class="container text-center mt-2">
+      <img src="https://img.icons8.com/small/96/000000/nodejs.png"/>
+    </div>
+    <%- include ("./partials/messages"); %>
+    <form action="/user/register" method="POST">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Name" value="<%=typeof name!='undefined'?name:''%>">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter Your Email" value="<%=typeof email!='undefined'?email:''%>">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" value="<%=typeof password!='undefined'?password:''%>">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="password2" name="password2" placeholder="Enter Confirm Password">
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto mb-3">
+            <button class="btn btn-danger" type="submit">Register</button>
+            <a href="/user/login" class="btn btn-danger">Login</a>
+          </div>
+      </form>
+    </div>
